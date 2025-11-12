@@ -165,9 +165,6 @@
             "projectReferences": {
               "C:\\Users\\Laurie.bassett-jones\\Projects\\Capstone\\Capstone.Domain\\Capstone.Domain.csproj": {
                 "projectPath": "C:\\Users\\Laurie.bassett-jones\\Projects\\Capstone\\Capstone.Domain\\Capstone.Domain.csproj"
-              },
-              "C:\\Users\\Laurie.bassett-jones\\Projects\\Capstone\\Capstone.Infrastructure\\Capstone.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Laurie.bassett-jones\\Projects\\Capstone\\Capstone.Infrastructure\\Capstone.Infrastructure.csproj"
               }
             }
           }
@@ -188,6 +185,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[15.1.0, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[12.1.0, )"

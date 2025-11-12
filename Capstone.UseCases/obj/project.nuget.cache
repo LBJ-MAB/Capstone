@@ -1,39 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "1P2EECAD4YM=",
-  "success": false,
+  "dgSpecHash": "M3cJ4Mkvlc4=",
+  "success": true,
   "projectFilePath": "C:\\Users\\Laurie.bassett-jones\\Projects\\Capstone\\Capstone.UseCases\\Capstone.UseCases.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\automapper\\15.1.0\\automapper.15.1.0.nupkg.sha512",
     "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\fluentvalidation\\12.1.0\\fluentvalidation.12.1.0.nupkg.sha512",
     "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\mediatr\\13.1.0\\mediatr.13.1.0.nupkg.sha512",
     "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
-    "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.22\\microsoft.entityframeworkcore.8.0.22.nupkg.sha512",
-    "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.22\\microsoft.entityframeworkcore.abstractions.8.0.22.nupkg.sha512",
-    "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.22\\microsoft.entityframeworkcore.analyzers.8.0.22.nupkg.sha512",
-    "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.1\\microsoft.extensions.caching.memory.8.0.1.nupkg.sha512",
-    "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.1\\microsoft.extensions.dependencyinjection.8.0.1.nupkg.sha512",
-    "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
-    "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.extensions.logging\\8.0.1\\microsoft.extensions.logging.8.0.1.nupkg.sha512",
-    "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
-    "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.14.0\\microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
     "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.14.0\\microsoft.identitymodel.jsonwebtokens.8.14.0.nupkg.sha512",
     "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.identitymodel.logging\\8.14.0\\microsoft.identitymodel.logging.8.14.0.nupkg.sha512",
     "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.14.0\\microsoft.identitymodel.tokens.8.14.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1108",
-      "level": "Error",
-      "message": "Cycle detected. \r\n  Capstone.UseCases -> Capstone.Infrastructure -> Capstone.UseCases.",
-      "projectPath": "C:\\Users\\Laurie.bassett-jones\\Projects\\Capstone\\Capstone.UseCases\\Capstone.UseCases.csproj",
-      "filePath": "C:\\Users\\Laurie.bassett-jones\\Projects\\Capstone\\Capstone.UseCases\\Capstone.UseCases.csproj",
-      "libraryId": "Capstone.UseCases",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  "logs": []
 }
