@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Capstone.Domain\Capstone.Domain.csproj" />
+      <ProjectReference Include="..\Capstone.Infrastructure\Capstone.Infrastructure.csproj" />
     </ItemGroup>
 
     <ItemGroup>

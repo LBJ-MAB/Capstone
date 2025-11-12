@@ -16,6 +16,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Capstone.Domain\Capstone.Domain.csproj" />
+        <ProjectReference Include="..\Capstone.UseCases\Capstone.UseCases.csproj" />
     </ItemGroup>
 
 </Project>
