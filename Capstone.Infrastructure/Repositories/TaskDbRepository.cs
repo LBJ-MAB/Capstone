@@ -52,4 +52,9 @@ public class TaskDbRepository : ITaskRepository
         _context.Tasks.Remove(taskItem);
         await _context.SaveChangesAsync();
     }
+
+    public async Task SaveChangesAsync()
+    {
+        await _context.SaveChangesAsync();
+    }
 }

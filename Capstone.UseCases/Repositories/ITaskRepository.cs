@@ -11,4 +11,5 @@ public interface ITaskRepository
     public Task<List<TaskItem>?> GetOverdueTasksAsync();
     public Task AddTaskAsync(TaskItem taskItem);
     public Task DeleteTaskAsync(TaskItem taskItem);
+    public Task SaveChangesAsync();
 }
