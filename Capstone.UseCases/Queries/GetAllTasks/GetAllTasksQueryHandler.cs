@@ -9,6 +9,7 @@ public class GetAllTasksQueryHandler : IRequestHandler<GetAllTasksQuery, List<Ta
 {
     private readonly ITaskRepository _repo;
     private readonly IMapper _mapper;
+    // logger
     
     public GetAllTasksQueryHandler(ITaskRepository repo, IMapper mapper)
     {
