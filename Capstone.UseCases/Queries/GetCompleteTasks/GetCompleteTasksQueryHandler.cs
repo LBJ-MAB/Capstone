@@ -20,7 +20,7 @@ public class GetCompleteTasksQueryHandler : IRequestHandler<GetCompleteTasksQuer
     public async Task<List<TaskItemDto>?> Handle(GetCompleteTasksQuery query, CancellationToken cancellationToken)
     {
         var completeTasks = await _repo.GetCompleteTasksAsync();
-        if (completeTasks is null)
+        if (completeTasks is null || !completeTasks.Any())
         {
             return null;
         }
