@@ -1,6 +1,6 @@
-using Capstone.Domain.Entities;
+using Capstone.Domain.Dtos;
 using MediatR;
 
 namespace Capstone.UseCases.Queries.GetAllTasks;
 
-public record GetAllTasksQuery() : IRequest<List<TaskItem>>;
+public record GetAllTasksQuery() : IRequest<List<TaskItemDto>?>;

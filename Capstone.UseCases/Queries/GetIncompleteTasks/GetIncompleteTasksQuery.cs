@@ -1,6 +1,6 @@
-using Capstone.Domain.Entities;
+using Capstone.Domain.Dtos;
 using MediatR;
 
 namespace Capstone.UseCases.Queries.GetIncompleteTasks;
 
-public record GetIncompleteTasksQuery() : IRequest<List<TaskItem>>;
+public record GetIncompleteTasksQuery() : IRequest<List<TaskItemDto>>;
