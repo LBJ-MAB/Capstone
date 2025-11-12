@@ -1,0 +1,5 @@
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.Infrastructure\obj\Debug\net9.0\Capstone.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.Infrastructure\obj\Debug\net9.0\Capstone.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.Infrastructure\obj\Debug\net9.0\Capstone.Infrastructure.AssemblyInfo.cs
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.Infrastructure\obj\Debug\net9.0\Capstone.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.Infrastructure\obj\Debug\net9.0\Capstone.Infrastructure.sourcelink.json

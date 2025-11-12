@@ -1,0 +1,12 @@
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.Domain\bin\Debug\net9.0\Capstone.Domain.deps.json
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.Domain\bin\Debug\net9.0\Capstone.Domain.dll
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.Domain\bin\Debug\net9.0\Capstone.Domain.pdb
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.Domain\obj\Debug\net9.0\Capstone.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.Domain\obj\Debug\net9.0\Capstone.Domain.AssemblyInfoInputs.cache
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.Domain\obj\Debug\net9.0\Capstone.Domain.AssemblyInfo.cs
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.Domain\obj\Debug\net9.0\Capstone.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.Domain\obj\Debug\net9.0\Capstone.Domain.sourcelink.json
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.Domain\obj\Debug\net9.0\Capstone.Domain.dll
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.Domain\obj\Debug\net9.0\refint\Capstone.Domain.dll
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.Domain\obj\Debug\net9.0\Capstone.Domain.pdb
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.Domain\obj\Debug\net9.0\ref\Capstone.Domain.dll

@@ -1,0 +1,16 @@
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.UseCases\bin\Debug\net9.0\Capstone.UseCases.deps.json
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.UseCases\bin\Debug\net9.0\Capstone.UseCases.dll
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.UseCases\bin\Debug\net9.0\Capstone.UseCases.pdb
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.UseCases\bin\Debug\net9.0\Capstone.Domain.dll
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.UseCases\bin\Debug\net9.0\Capstone.Domain.pdb
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.UseCases\obj\Debug\net9.0\Capstone.UseCases.csproj.AssemblyReference.cache
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.UseCases\obj\Debug\net9.0\Capstone.UseCases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.UseCases\obj\Debug\net9.0\Capstone.UseCases.AssemblyInfoInputs.cache
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.UseCases\obj\Debug\net9.0\Capstone.UseCases.AssemblyInfo.cs
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.UseCases\obj\Debug\net9.0\Capstone.UseCases.csproj.CoreCompileInputs.cache
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.UseCases\obj\Debug\net9.0\Capstone.UseCases.sourcelink.json
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.UseCases\obj\Debug\net9.0\Capstone.73A181E6.Up2Date
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.UseCases\obj\Debug\net9.0\Capstone.UseCases.dll
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.UseCases\obj\Debug\net9.0\refint\Capstone.UseCases.dll
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.UseCases\obj\Debug\net9.0\Capstone.UseCases.pdb
+C:\Users\Laurie.bassett-jones\Projects\Capstone\Capstone.UseCases\obj\Debug\net9.0\ref\Capstone.UseCases.dll
