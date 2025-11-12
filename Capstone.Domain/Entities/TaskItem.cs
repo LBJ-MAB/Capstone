@@ -1,4 +1,4 @@
-﻿namespace Capstone.Domain;
+﻿namespace Capstone.Domain.Entities;
 
 public class TaskItem
 {
