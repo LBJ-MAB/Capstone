@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VVUmIOr9ZG0=",
+  "dgSpecHash": "c2GJ9ehDOTc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Laurie.bassett-jones\\Projects\\Capstone\\Capstone.UseCases\\Capstone.UseCases.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\fluentvalidation\\12.1.0\\fluentvalidation.12.1.0.nupkg.sha512",
     "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\mediatr\\13.1.0\\mediatr.13.1.0.nupkg.sha512",
     "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Laurie.bassett-jones\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
