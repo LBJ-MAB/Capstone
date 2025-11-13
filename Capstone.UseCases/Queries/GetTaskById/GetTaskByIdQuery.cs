@@ -3,4 +3,4 @@ using MediatR;
 
 namespace Capstone.UseCases.Queries.GetTaskById;
 
-public record GetTaskByIdQuery(int Id) : IRequest<List<TaskItemDto>>;
+public record GetTaskByIdQuery(int Id) : IRequest<TaskItemDto?>;

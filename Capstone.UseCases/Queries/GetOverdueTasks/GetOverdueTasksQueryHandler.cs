@@ -5,7 +5,7 @@ using MediatR;
 
 namespace Capstone.UseCases.Queries.GetOverdueTasks;
 
-public class GetOverdueTasksQueryHandler : IRequestHandler<GetOverdueTasksQueryHandler, List<TaskItemDto>?>
+public class GetOverdueTasksQueryHandler : IRequestHandler<GetOverdueTasksQuery, List<TaskItemDto>?>
 {
     private readonly ITaskRepository _repo;
     private readonly IMapper _mapper;
