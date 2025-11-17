@@ -7,5 +7,5 @@ public class UpdateTaskResult
     public bool Success;
     public bool? NotFound;
     public bool? NotValid;
-    public TaskItem? TaskItem;
+    public IDictionary<string, string[]>? Errors;
 }

@@ -7,5 +7,5 @@ public class AddTaskResult
 {
     public bool Success { get; set; }
     public TaskItem? TaskItem { get; set; }
-    public List<ValidationFailure>? Errors { get; set; }
+    public IDictionary<string, string[]>? Errors { get; set; }
 }

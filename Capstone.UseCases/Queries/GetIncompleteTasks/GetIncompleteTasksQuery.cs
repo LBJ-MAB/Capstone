@@ -3,4 +3,4 @@ using MediatR;
 
 namespace Capstone.UseCases.Queries.GetIncompleteTasks;
 
-public record GetIncompleteTasksQuery() : IRequest<List<TaskItemDto>>;
+public record GetIncompleteTasksQuery() : IRequest<List<TaskItemDto>?>;

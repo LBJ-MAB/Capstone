@@ -1,6 +1,7 @@
 using AutoMapper;
 using Capstone.Domain.Dtos;
 using Capstone.UseCases.Repositories;
+using Capstone.UseCases.Validation;
 using FluentValidation;
 using MediatR;
 
@@ -9,26 +10,27 @@ namespace Capstone.UseCases.Commands.UpdateTask;
 public class UpdateTaskCommandHandler : IRequestHandler<UpdateTaskCommand, UpdateTaskResult>
 {
     private readonly ITaskRepository _repo;
-    private readonly IValidator<TaskItemDto> _validator;
+    private readonly UpdateTaskValidator _updateTaskValidator;
     // logger
     
-    public UpdateTaskCommandHandler(ITaskRepository repo, IValidator<TaskItemDto> validator, IMapper mapper)
+    public UpdateTaskCommandHandler(ITaskRepository repo, IEnumerable<IValidator<TaskItemDto>> validators, IMapper mapper)
     {
         _repo = repo;
-        _validator = validator;
+        _updateTaskValidator = validators.OfType<UpdateTaskValidator>().First();
     }
 
     public async Task<UpdateTaskResult> Handle(UpdateTaskCommand command, CancellationToken cancellationToken)
     {
         // return updatedTaskResult
         
-        var validationResult = await _validator.ValidateAsync(command.taskItemDto);
+        var validationResult = await _updateTaskValidator.ValidateAsync(command.taskItemDto);
         if (!validationResult.IsValid)
         {
             return new UpdateTaskResult
             {
                 Success = false,
-                NotValid = true
+                NotValid = true,
+                Errors = validationResult.ToDictionary()
             };
         }
 
@@ -53,8 +55,7 @@ public class UpdateTaskCommandHandler : IRequestHandler<UpdateTaskCommand, Updat
 
         return new UpdateTaskResult
         {
-            Success = true,
-            TaskItem = taskItem
+            Success = true
         };
     }
 }
