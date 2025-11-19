@@ -49,7 +49,7 @@ public class UpdateTaskCommandHandler : IRequestHandler<UpdateTaskCommand, Updat
         taskItem.Description = command.taskItemDto.Description;
         taskItem.Priority = command.taskItemDto.Priority;
         taskItem.DueDate = command.taskItemDto.DueDate;
-        taskItem.UpdatedAt = DateOnly.FromDateTime(DateTime.UtcNow);
+        taskItem.UpdatedAt = DateTime.UtcNow;
 
         await _repo.SaveChangesAsync();
 
