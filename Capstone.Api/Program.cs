@@ -5,6 +5,7 @@ using Capstone.Infrastructure.Repositories;
 using Capstone.UseCases.Commands.AddTask;
 using Capstone.UseCases.Commands.DeleteTaskCommand;
 using Capstone.UseCases.Commands.UpdateTask;
+using Capstone.UseCases.Logging;
 using Capstone.UseCases.Mapping;
 using Capstone.UseCases.Queries.GetAllTasks;
 using Capstone.UseCases.Queries.GetCompleteTasks;
@@ -26,6 +27,7 @@ builder.Host.UseSerilog((context, configuration) =>
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>));
 builder.Services.AddDbContext<TaskDb>(opt => 
     opt.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=TaskDB;Trusted_Connection=True;"));
 builder.Services.AddScoped<ITaskRepository, TaskDbRepository>();
@@ -33,6 +35,8 @@ builder.Services.AddScoped<IValidator<TaskItemDto>, AddTaskValidator>();
 builder.Services.AddScoped<IValidator<TaskItemDto>, UpdateTaskValidator>();
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(GetTaskByIdQueryHandler).Assembly));
 builder.Services.AddAutoMapper(cfg => { }, typeof(TaskItemDtoMapper));
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ICorrelationIdAccessor, CorrelationIdAccessor>();
 
 var app = builder.Build();
 
