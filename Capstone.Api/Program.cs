@@ -35,6 +35,8 @@ builder.Services.AddScoped<IValidator<TaskItemDto>, AddTaskValidator>();
 builder.Services.AddScoped<IValidator<TaskItemDto>, UpdateTaskValidator>();
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(GetTaskByIdQueryHandler).Assembly));
 builder.Services.AddAutoMapper(cfg => { }, typeof(TaskItemDtoMapper));
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ICorrelationIdAccessor, CorrelationIdAccessor>();
 
 var app = builder.Build();
 
