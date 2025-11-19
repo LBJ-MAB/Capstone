@@ -26,7 +26,12 @@ public class GetOverdueTasksQueryHandler : IRequestHandler<GetOverdueTasksQuery,
         }
 
         var overdueTasksDtos = _mapper.Map<List<TaskItemDto>>(overdueTasks);
-        return overdueTasksDtos;
+        
+        // order by due date -> priority
+        return overdueTasksDtos
+            .OrderBy(t => t.DueDate)
+            .ThenBy(t => t.Priority)
+            .ToList();;
     }
 }
 
