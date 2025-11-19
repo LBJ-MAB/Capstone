@@ -37,7 +37,7 @@ public class TaskDbRepository : ITaskRepository
     public async Task<List<TaskItem>?> GetOverdueTasksAsync()
     {
         var overdueTasks = await _context.Tasks
-            .Where(t => !t.IsComplete && t.DueDate < DateTime.UtcNow)
+            .Where(t => !t.IsComplete && t.DueDate < DateOnly.FromDateTime(DateTime.UtcNow))
             .ToListAsync();
         return overdueTasks;
     }

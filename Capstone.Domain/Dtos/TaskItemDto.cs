@@ -6,5 +6,5 @@ public class TaskItemDto
     public bool IsComplete { get; set; }
     public string? Description { get; set; }
     public int? Priority { get; set; }
-    public DateTime? DueDate { get; set; }
+    public DateOnly? DueDate { get; set; }
 }

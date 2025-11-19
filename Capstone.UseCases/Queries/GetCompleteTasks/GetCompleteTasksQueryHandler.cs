@@ -26,6 +26,8 @@ public class GetCompleteTasksQueryHandler : IRequestHandler<GetCompleteTasksQuer
         }
 
         var completeTasksDtos = _mapper.Map<List<TaskItemDto>>(completeTasks);
-        return completeTasksDtos;
+        
+        // order by DueDate descending
+        return completeTasksDtos.OrderByDescending(t => t.DueDate).ToList();
     }
 }

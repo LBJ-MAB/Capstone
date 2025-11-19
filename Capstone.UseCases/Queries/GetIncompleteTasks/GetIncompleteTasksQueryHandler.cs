@@ -25,6 +25,10 @@ public class GetIncompleteTasksQueryHandler : IRequestHandler<GetIncompleteTasks
         }
 
         var incompleteTasksDtos = _mapper.Map<List<TaskItemDto>>(incompleteTasks);
-        return incompleteTasksDtos;
+        
+        return incompleteTasksDtos
+            .OrderBy(t => t.DueDate)
+            .ThenBy(t => t.Priority)
+            .ToList();
     }
 }

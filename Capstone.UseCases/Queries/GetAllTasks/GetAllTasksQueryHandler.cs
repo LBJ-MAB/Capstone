@@ -26,6 +26,11 @@ public class GetAllTasksQueryHandler : IRequestHandler<GetAllTasksQuery, List<Ta
         }
         
         var allTasksDtos = _mapper.Map<List<TaskItemDto>>(allTasks);
-        return allTasksDtos;
+        
+        // order by is complete -> due date -> priority
+        return allTasksDtos.OrderBy(t => t.IsComplete)
+            .ThenBy(t => t.DueDate)
+            .ThenBy(t => t.Priority)
+            .ToList();
     }
 }
