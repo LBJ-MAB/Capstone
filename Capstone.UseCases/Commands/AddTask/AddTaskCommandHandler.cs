@@ -35,7 +35,7 @@ public class AddTaskCommandHandler : IRequestHandler<AddTaskCommand, AddTaskResu
         }
 
         var taskItem = _mapper.Map<TaskItem>(command.taskItemDto);
-        taskItem.CreatedAt = DateTime.UtcNow;
+        taskItem.CreatedAt = DateOnly.FromDateTime(DateTime.UtcNow);
         
         await _repo.AddTaskAsync(taskItem);
 

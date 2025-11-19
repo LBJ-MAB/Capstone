@@ -7,7 +7,7 @@ public class TaskItem
     public bool IsComplete { get; set; }
     public string? Description { get; set; }
     public int? Priority { get; set; }
-    public DateTime? DueDate { get; set; }
-    public DateTime? CreatedAt { get; set; }
-    public DateTime? UpdatedAt { get; set; }
+    public DateOnly? DueDate { get; set; }
+    public DateOnly? CreatedAt { get; set; }
+    public DateOnly? UpdatedAt { get; set; }
 }
