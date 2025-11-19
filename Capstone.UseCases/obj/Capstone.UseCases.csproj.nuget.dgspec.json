@@ -118,6 +118,14 @@
             "MediatR": {
               "target": "Package",
               "version": "[13.1.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[3.*, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.*, )"
             }
           },
           "imports": [
