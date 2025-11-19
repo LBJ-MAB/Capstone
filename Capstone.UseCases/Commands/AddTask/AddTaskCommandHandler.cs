@@ -15,10 +15,10 @@ public class AddTaskCommandHandler : IRequestHandler<AddTaskCommand, AddTaskResu
     private readonly IMapper _mapper;
     // logger
 
-    public AddTaskCommandHandler(ITaskRepository repo, IEnumerable<IValidator<TaskItemDto>> validators, IMapper mapper)
+    public AddTaskCommandHandler(ITaskRepository repo, AddTaskValidator addTaskValidator, IMapper mapper)
     {
         _repo = repo;
-        _addTaskValidator = validators.OfType<AddTaskValidator>().First();
+        _addTaskValidator = addTaskValidator;
         _mapper = mapper;
     }
 

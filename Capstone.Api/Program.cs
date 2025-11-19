@@ -32,8 +32,8 @@ builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehavi
 builder.Services.AddDbContext<TaskDb>(opt => 
     opt.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=TaskDB;Trusted_Connection=True;"));
 builder.Services.AddScoped<ITaskRepository, TaskDbRepository>();
-builder.Services.AddScoped<IValidator<TaskItemDto>, AddTaskValidator>();
-builder.Services.AddScoped<IValidator<TaskItemDto>, UpdateTaskValidator>();
+builder.Services.AddScoped<AddTaskValidator>();
+builder.Services.AddScoped<UpdateTaskValidator>();
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(GetTaskByIdQueryHandler).Assembly));
 builder.Services.AddAutoMapper(cfg => { }, typeof(TaskItemDtoMapper));
 builder.Services.AddHttpContextAccessor();
