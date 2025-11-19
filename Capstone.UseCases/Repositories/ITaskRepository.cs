@@ -9,6 +9,7 @@ public interface ITaskRepository
     public Task<List<TaskItem>?> GetCompleteTasksAsync();
     public Task<List<TaskItem>?> GetIncompleteTasksAsync();
     public Task<List<TaskItem>?> GetOverdueTasksAsync();
+    public Task<List<TaskItem>?> GetPagedTasksAsync(int pageNumber, int tasksPerPage);
     public Task AddTaskAsync(TaskItem taskItem);
     public Task DeleteTaskAsync(TaskItem taskItem);
     public Task SaveChangesAsync();

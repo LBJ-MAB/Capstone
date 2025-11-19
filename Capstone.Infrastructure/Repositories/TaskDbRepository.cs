@@ -41,6 +41,16 @@ public class TaskDbRepository : ITaskRepository
             .ToListAsync();
         return overdueTasks;
     }
+
+    public async Task<List<TaskItem>?> GetPagedTasksAsync(int pageNumber, int tasksPerPage)
+    {
+        var pagedTasks = await _context.Tasks
+            .Skip((pageNumber - 1) * tasksPerPage)
+            .Take(tasksPerPage)
+            .ToListAsync();
+        return pagedTasks;
+    }
+    
     public async Task AddTaskAsync(TaskItem taskItem)
     {
         await _context.Tasks.AddAsync(taskItem);

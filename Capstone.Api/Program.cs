@@ -11,6 +11,7 @@ using Capstone.UseCases.Queries.GetAllTasks;
 using Capstone.UseCases.Queries.GetCompleteTasks;
 using Capstone.UseCases.Queries.GetIncompleteTasks;
 using Capstone.UseCases.Queries.GetOverdueTasks;
+using Capstone.UseCases.Queries.GetPagedTasks;
 using Capstone.UseCases.Queries.GetTaskById;
 using Capstone.UseCases.Repositories;
 using Capstone.UseCases.Validation;
@@ -77,6 +78,12 @@ tasks.MapGet("/overdue", async (ISender sender) =>
     var query = new GetOverdueTasksQuery();
     var overdueTasks = await sender.Send(query);
     return overdueTasks is null ? Results.NotFound("No overdue tasks found") : Results.Ok(overdueTasks);
+});
+tasks.MapGet("/paged", async (ISender sender, [FromQuery] int pageNumber, [FromQuery] int tasksPerPage) =>
+{
+    var query = new GetPagedTasksQuery(pageNumber, tasksPerPage);
+    var result = await sender.Send(query);
+    return result is null ? Results.NotFound($"No tasks found on page {pageNumber}") : Results.Ok(result);
 });
 
 tasks.MapPost("/", async (ISender sender, [FromBody] TaskItemDto taskItemDto) =>
