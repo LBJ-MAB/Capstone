@@ -1,9 +1,10 @@
 using Capstone.Domain.Dtos;
+using Capstone.UseCases.Validation.Abstractions;
 using FluentValidation;
 
 namespace Capstone.UseCases.Validation;
 
-public class AddTaskValidator : AbstractValidator<TaskItemDto>
+public class AddTaskValidator : AbstractValidator<TaskItemDto>, IAddTaskValidator
 {
     public AddTaskValidator()
     {
