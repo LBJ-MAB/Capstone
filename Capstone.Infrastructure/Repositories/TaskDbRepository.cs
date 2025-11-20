@@ -55,7 +55,6 @@ public class TaskDbRepository : ITaskRepository
     {
         await _context.Tasks.AddAsync(taskItem);
         await _context.SaveChangesAsync();
-
     }
     public async Task DeleteTaskAsync(TaskItem taskItem)
     {

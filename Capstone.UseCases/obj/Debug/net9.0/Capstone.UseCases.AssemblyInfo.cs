@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Capstone.UseCases")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ad495f4b4980505c966b006a099265665845a5d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+311cf12d29b516492d89e82897d4a7b6faa9fa4b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Capstone.UseCases")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Capstone.UseCases")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

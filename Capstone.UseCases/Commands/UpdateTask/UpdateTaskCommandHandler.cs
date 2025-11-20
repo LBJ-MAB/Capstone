@@ -2,6 +2,7 @@ using AutoMapper;
 using Capstone.Domain.Dtos;
 using Capstone.UseCases.Repositories;
 using Capstone.UseCases.Validation;
+using Capstone.UseCases.Validation.Abstractions;
 using FluentValidation;
 using MediatR;
 
@@ -10,10 +11,10 @@ namespace Capstone.UseCases.Commands.UpdateTask;
 public class UpdateTaskCommandHandler : IRequestHandler<UpdateTaskCommand, UpdateTaskResult>
 {
     private readonly ITaskRepository _repo;
-    private readonly UpdateTaskValidator _updateTaskValidator;
+    private readonly IUpdateTaskValidator _updateTaskValidator;
     // logger
     
-    public UpdateTaskCommandHandler(ITaskRepository repo, UpdateTaskValidator updateTaskValidator, IMapper mapper)
+    public UpdateTaskCommandHandler(ITaskRepository repo, IUpdateTaskValidator updateTaskValidator, IMapper mapper)
     {
         _repo = repo;
         _updateTaskValidator = updateTaskValidator;
@@ -23,7 +24,7 @@ public class UpdateTaskCommandHandler : IRequestHandler<UpdateTaskCommand, Updat
     {
         // return updatedTaskResult
         
-        var validationResult = await _updateTaskValidator.ValidateAsync(command.taskItemDto);
+        var validationResult = await _updateTaskValidator.ValidateAsync(command.taskItemDto, cancellationToken);
         if (!validationResult.IsValid)
         {
             return new UpdateTaskResult

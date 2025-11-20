@@ -15,6 +15,7 @@ using Capstone.UseCases.Queries.GetPagedTasks;
 using Capstone.UseCases.Queries.GetTaskById;
 using Capstone.UseCases.Repositories;
 using Capstone.UseCases.Validation;
+using Capstone.UseCases.Validation.Abstractions;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -32,8 +33,8 @@ builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehavi
 builder.Services.AddDbContext<TaskDb>(opt => 
     opt.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=TaskDB;Trusted_Connection=True;"));
 builder.Services.AddScoped<ITaskRepository, TaskDbRepository>();
-builder.Services.AddScoped<AddTaskValidator>();
-builder.Services.AddScoped<UpdateTaskValidator>();
+builder.Services.AddScoped<IAddTaskValidator, AddTaskValidator>();
+builder.Services.AddScoped<IUpdateTaskValidator, UpdateTaskValidator>();
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(GetTaskByIdQueryHandler).Assembly));
 builder.Services.AddAutoMapper(cfg => { }, typeof(TaskItemDtoMapper));
 builder.Services.AddHttpContextAccessor();
