@@ -24,7 +24,7 @@ public class AddTaskCommandHandler : IRequestHandler<AddTaskCommand, AddTaskResu
 
     public async Task<AddTaskResult> Handle(AddTaskCommand command, CancellationToken cancellationToken)
     {
-        var validationResult = await _addTaskValidator.ValidateAsync(command.taskItemDto);
+        var validationResult = await _addTaskValidator.ValidateAsync(command.taskItemDto, cancellationToken);
         if (!validationResult.IsValid)
         {
             return new AddTaskResult
