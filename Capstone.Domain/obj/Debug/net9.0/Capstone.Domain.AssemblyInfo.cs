@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Capstone.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+311cf12d29b516492d89e82897d4a7b6faa9fa4b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77b48a5a8f6ec7fde29ba41a41f225135a58e76d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Capstone.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Capstone.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

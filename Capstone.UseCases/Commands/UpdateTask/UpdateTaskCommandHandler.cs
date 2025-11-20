@@ -14,7 +14,7 @@ public class UpdateTaskCommandHandler : IRequestHandler<UpdateTaskCommand, Updat
     private readonly IUpdateTaskValidator _updateTaskValidator;
     // logger
     
-    public UpdateTaskCommandHandler(ITaskRepository repo, IUpdateTaskValidator updateTaskValidator, IMapper mapper)
+    public UpdateTaskCommandHandler(ITaskRepository repo, IUpdateTaskValidator updateTaskValidator)
     {
         _repo = repo;
         _updateTaskValidator = updateTaskValidator;
