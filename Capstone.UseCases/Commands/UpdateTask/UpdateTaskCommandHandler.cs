@@ -13,10 +13,10 @@ public class UpdateTaskCommandHandler : IRequestHandler<UpdateTaskCommand, Updat
     private readonly UpdateTaskValidator _updateTaskValidator;
     // logger
     
-    public UpdateTaskCommandHandler(ITaskRepository repo, IEnumerable<IValidator<TaskItemDto>> validators, IMapper mapper)
+    public UpdateTaskCommandHandler(ITaskRepository repo, UpdateTaskValidator updateTaskValidator, IMapper mapper)
     {
         _repo = repo;
-        _updateTaskValidator = validators.OfType<UpdateTaskValidator>().First();
+        _updateTaskValidator = updateTaskValidator;
     }
 
     public async Task<UpdateTaskResult> Handle(UpdateTaskCommand command, CancellationToken cancellationToken)

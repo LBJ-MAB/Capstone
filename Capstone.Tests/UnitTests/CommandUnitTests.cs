@@ -3,6 +3,7 @@ using Capstone.Domain.Dtos;
 using Capstone.Domain.Entities;
 using Capstone.UseCases.Commands.AddTask;
 using Capstone.UseCases.Repositories;
+using Capstone.UseCases.Validation;
 using FluentAssertions;
 using FluentValidation;
 using FluentValidation.Results;
@@ -15,16 +16,16 @@ public class CommandUnitTests
 {
     // mock repo, validator and mapper
     private Mock<ITaskRepository> _mockRepo;
-    private Mock<IValidator<TaskItemDto>> _mockAddTaskValidator;
-    private Mock<IValidator<TaskItemDto>> _mockUpdateTaskValidator;
+    private Mock<AddTaskValidator> _mockAddTaskValidator;
+    private Mock<UpdateTaskValidator> _mockUpdateTaskValidator;
     private Mock<IMapper> _mockMapper;
     
     [SetUp]
     public void Setup()
     {
         _mockRepo = new Mock<ITaskRepository>();
-        _mockAddTaskValidator = new Mock<IValidator<TaskItemDto>>();
-        _mockUpdateTaskValidator = new Mock<IValidator<TaskItemDto>>();
+        _mockAddTaskValidator = new Mock<AddTaskValidator>();
+        _mockUpdateTaskValidator = new Mock<UpdateTaskValidator>();
         _mockMapper = new Mock<IMapper>();
     }
 
@@ -36,7 +37,7 @@ public class CommandUnitTests
             .ReturnsAsync(new ValidationResult([new ValidationFailure("property", "error")]));
         
         var command = new AddTaskCommand(It.IsAny<TaskItemDto>());
-        var handler = new AddTaskCommandHandler(_mockRepo.Object, [ _mockAddTaskValidator.Object, _mockUpdateTaskValidator.Object ], _mockMapper.Object);
+        var handler = new AddTaskCommandHandler(_mockRepo.Object, _mockAddTaskValidator.Object, _mockMapper.Object);
         
         // act
         var result = await handler.Handle(command, CancellationToken.None);
