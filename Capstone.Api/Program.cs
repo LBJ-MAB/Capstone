@@ -30,8 +30,7 @@ builder.Host.UseSerilog((context, configuration) =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>));
-builder.Services.AddDbContext<TaskDb>(opt => 
-    opt.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=TaskDB;Trusted_Connection=True;"));
+builder.Services.AddDbContext<TaskDb>(opt => opt.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=TaskDB;Trusted_Connection=True;"));
 builder.Services.AddScoped<ITaskRepository, TaskDbRepository>();
 builder.Services.AddScoped<IAddTaskValidator, AddTaskValidator>();
 builder.Services.AddScoped<IUpdateTaskValidator, UpdateTaskValidator>();
@@ -54,19 +53,19 @@ tasks.MapGet("/", async (ISender sender) =>
 {
     var query = new GetAllTasksQuery();
     var allTasks = await sender.Send(query);
-    return allTasks is null ? Results.NotFound("No tasks found") : Results.Ok(allTasks) ;
+    return allTasks is null ? Results.NotFound("No tasks found") : Results.Ok(allTasks);
 });
 tasks.MapGet("/{id}", async (ISender sender, [FromRoute] int id) =>
 {
     var query = new GetTaskByIdQuery(id);
     var task = await sender.Send(query);
-    return task is null ? Results.NotFound($"No task with id {id} found") : Results.Ok(task) ;
+    return task is null ? Results.NotFound($"No task with id {id} found") : Results.Ok(task);
 });
 tasks.MapGet("/complete", async (ISender sender) =>
 {
     var query = new GetCompleteTasksQuery();
     var completeTasks = await sender.Send(query);
-    return completeTasks is null ? Results.NotFound("No complete tasks found") : Results.Ok(completeTasks) ;
+    return completeTasks is null ? Results.NotFound("No complete tasks found") : Results.Ok(completeTasks);
 });
 tasks.MapGet("/incomplete", async (ISender sender) =>
 {
@@ -92,7 +91,7 @@ tasks.MapPost("/", async (ISender sender, [FromBody] TaskItemDto taskItemDto) =>
     var command = new AddTaskCommand(taskItemDto);
     var result = await sender.Send(command);
     return 
-        result.Success == true ? 
+        result.Success == true ?
         Results.Created($"/tasks/{result.TaskItem!.Id}", result.TaskItem) :
         Results.ValidationProblem(result.Errors!);
 });
