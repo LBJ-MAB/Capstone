@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 namespace Capstone.UseCases.Logging;
 
 public class LoggingBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+    where TRequest : notnull
 {
     private readonly ILogger<LoggingBehaviour<TRequest, TResponse>> _logger;
     private readonly ICorrelationIdAccessor _correlationIdAccessor;
