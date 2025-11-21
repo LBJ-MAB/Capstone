@@ -1,6 +1,3 @@
-/*
-
-
 using System.Net.Http.Json;
 using Capstone.Domain.Dtos;
 using Capstone.Infrastructure.Persistence;
@@ -15,6 +12,7 @@ namespace Capstone.Tests.IntegrationTests;
 [TestFixture]
 public class IntegrationTests
 {
+    /*
     private HttpClient CreateTestClient()
     {
         var application = new WebApplicationFactory<Program>()
@@ -38,12 +36,14 @@ public class IntegrationTests
             db.SaveChanges();
         }
     }
+    */
     
     [SetUp]
     public void Setup()
     {
     }
 
+    /*
     [Test]
     public async Task PostRequest_ShouldReturnCreatedStatusCode_WhenValidTaskGiven()
     {
@@ -61,6 +61,13 @@ public class IntegrationTests
         // assert
         result.StatusCode.Should().Be(HttpStatusCode.Created);  
     }
+    */
+
+    [Test]
+    public void Test()
+    {
+        var x = 1;
+        x.Should().Be(1);
+    }
 }
 
- */
