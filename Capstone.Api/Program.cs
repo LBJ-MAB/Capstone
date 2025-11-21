@@ -112,3 +112,5 @@ tasks.MapDelete("/{id}", async (ISender sender, [FromRoute] int id) =>
 });
 
 app.Run();
+
+public partial class Program { }
