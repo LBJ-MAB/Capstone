@@ -43,26 +43,6 @@ public class IntegrationTests
     {
     }
 
-    /*
-    [Test]
-    public async Task PostRequest_ShouldReturnCreatedStatusCode_WhenValidTaskGiven()
-    {
-        // arrange
-        var taskDto = new TaskItemDto
-        {
-            Title = "test title",
-            IsComplete = false
-        };
-        var client = CreateTestClient();
-
-        // act
-        var result = await client.PostAsJsonAsync("/tasks", taskDto);
-
-        // assert
-        result.StatusCode.Should().Be(HttpStatusCode.Created);  
-    }
-    */
-
     [Test]
     public void Test()
     {
