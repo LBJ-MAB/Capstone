@@ -12,6 +12,6 @@ public class TaskDb : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<TaskItem>().HasData(
-            new TaskItem { Id = 1, Title = "Seed Data", IsComplete = false});
+            new TaskItem { Id = Guid.NewGuid().ToString(), Title = "Seed Data", IsComplete = false});
     }
 }
