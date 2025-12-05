@@ -48,11 +48,19 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.11, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.0-preview.*, )"
+              "version": "[9.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.11, )"
             },
             "Serilog": {
               "target": "Package",
@@ -198,23 +206,23 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.0-preview.3.24172.13, )"
+              "version": "[9.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.0-preview.3.24172.13, )"
+              "version": "[9.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.0-preview.3.24172.13, )"
+              "version": "[9.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.5, )"
+              "version": "[9.0.11, )"
             }
           },
           "imports": [
@@ -296,11 +304,15 @@
             },
             "Microsoft.AspNetCore.Mvc.Testing": {
               "target": "Package",
-              "version": "[9.0.0-preview.3.24172.13, )"
+              "version": "[9.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
-              "version": "[9.0.0-preview.3.24172.13, )"
+              "version": "[9.0.11, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
